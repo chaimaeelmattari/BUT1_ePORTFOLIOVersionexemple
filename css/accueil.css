@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Quicksand:wght@300;400&display=swap');
+
+ body {
+ 	padding: 0 2% ;    /*marge*/
+ 	margin: 0;
+ 	font-family: 'Quicksand', sans-serif;
+ 	background-color: lightslategray;
+ 	animation: transition1 3s;  /*j'applique le keyframes que j'ai créer plus loin, une transition*/
+ }
+
+ nav {
+ 	display: flex;   /*alignement des éléments (flexbox)*/
+ 	flex-wrap: wrap;
+ 	justify-content: space-between; /* espace entre div et liste*/
+ 	align-items: center;  /* alignement div aux onglets menu */
+ 	position: sticky;
+ 	top: 0;                /*fixation du menu même pendant le défilement au sein de la page, en haut*/
+ 	background-color: lightslategray;  /*couleur de fond de la barre de navigation fixée pour ne pas qu'elle soit transparente*/
+ }
+
+ nav .logo {
+ 	display: flex;  /*alignement texte logo*/
+ 	align-items: center;  /* centrer titre et logo*/
+ 	
+
+ }
+
+ nav .logo img {         /*Le logo*/
+ 	width: 150px;
+ 	height: 25px;
+ }
+
+nav .logo h1 {             /*Titre Chaimae El Mattari*/
+	margin-left: 10px;
+	font-size: 17px;
+}
+
+nav ul {             /*Ul liste menu*/
+	display: flex;         
+	list-style-type: none;         /*enlever les puces*/
+
+}
+
+nav ul  a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li {     /*li liste menu*/
+	
+	margin-left: 20px; 
+	cursor: pointer;   /* apparition d'un pointeur lorsqu'on survole les éléments li du menu*/
+	border-bottom: 1px solid black;  /*bordure sous les éléments*/
+}
+
+nav ul li:hover {
+	border-bottom-color: grey;    /*changement de couleur de la bordure, effet de survol*/
+
+
+}
+
+.page { 
+	margin: 4%;    /*marge de tout les élèments présent dans la page, soit dans la balise page*/
+}
+
+.page header {
+	margin-top: 5%;   /*séparation de la barre de navigation avec le header*/
+	max-width: 80%;    /*largeur max du header*/
+}
+
+.page header h1 {
+	margin: 0;
+	text-transform: uppercase;  /*texte en majuscule*/
+	font-family: 'Oswald',sans-serif;
+	font-size: 45px;   
+}
+
+.page header p {
+	line-height: 30px; /*espace entre chaque ligne*/
+	color: white;        /*Couleur texte*/
+}
+
+.page header button {  /*bouton*/
+	background-color: inherit;   /* "transparent"*/
+	border: none;        /*pas de bordure*/
+	outline: none;    /*enlever la bordure qui s'applique quand on clique sur le bouton*/
+	padding: 0;    /*enlever les marges pour permettre le bon alignement*/
+	font-size: 15px;  /*taille texte */
+	font-weight: bold;   /*mettre en gras*/
+	padding-bottom: 5px; /*espace bordure texte*/
+	border-bottom: 1px solid grey; /*bordure sous le texte du bouton*/
+	cursor: pointer;   /* apparition d'un pointeur lorsqu'on survole le bouton*/
+}
+
+.page header button:hover {
+	color: grey;
+	border-bottom-color: black;
+}
+
+.page .image_accueil {
+	margin-top: 5%;         /*séparation entre image et header*/
+}
+
+.page .image_accueil img {
+	max-width: 100%;  /*largeur à ne pas dépasser*/
+	height: 500px;
+	width: 1280px;
+	transition: transform 1s;  /*transition*/
+}
+
+.page .image_accueil img:hover {    /*transitions*/
+	transform: scale(1.1) rotate(10deg);
+}
+
+
+footer {
+	margin-top: 5%;  /*espacer le footer de l'image*/
+	display: flex;    /*alignement les colonnes*/
+	flex-wrap: wrap;  /*passer à la ligne les élèments qui ne rentre pas*/
+	justify-content: space-around; /*espace tout autour des élèments*/
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+footer .colonne p {
+	font-size: 12px;
+	color: grey;	
+	cursor: pointer;
+}
+footer .colonne p:hover {
+	color: white;
+}
+
+footer .colonne a {
+	text-decoration: none;
+}
+
+@keyframes transition1 {   /* CRÉATION D'UNE TRANSITION APPLICABLE À TOUT AVEC LE ANIMATION*/
+	from {
+		transition: translateY(200px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+
+/*rendre le site responsive*/
+
+@media screen and (max-width: 700px) {
+	nav {
+		justify-content: center;
+	}
+	
+	.page header {
+		margin-top: 10%;
+		max-width: 100%;
+	}
+
+	footer {
+		justify-content: flex-start; /* commencer au début du footer*/
+	}
+	
+	footer .colonne {
+		width: 80% ;   /*empiler*/
+	}
+}
+
+
+
+
+
+
+

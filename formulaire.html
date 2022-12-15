@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+   <link rel="stylesheet" type="text/css" href="css/formulaire.css">
+
+    <title>Votre Avis!</title>
+  </head>
+  <body>
+    <div id="Global">
+
+<!--*****************************************Début du formulaire*************************************************-->         
+      <form action="#/Ma_page_De_Traitement" method="post"> 
+        <h1>Laissez moi vos avis ici!</h1>
+        <section>
+          <h2>Pour vous connaitre un peu plus</h2>
+          <fieldset>
+            <legend>État Civil</legend>
+            <ul>
+              <li>
+                <label for="titre1">
+                <input type="radio" id="titre1" name="titre" value="M"> Monsieur
+                </label>
+              </li>
+              <li>
+                <label for="titre1">
+                <input type="radio" id="titre2" name="titre" value="Mme"> Madame
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <p> 
+            <label class="Info_perso">Prénom</label>
+            <input class="Info_perso_input" type="text" id="name" name="Nom">
+          </p>
+          <p> 
+            <label class="Info_perso">Email</label>
+            <input class="Info_perso_input" type="email" id="email" name="Email">
+          </p>
+          <p> 
+            <label class="Info_perso">Avis</label>
+            <input class="Info_perso_input" type="text" id="avis" name="Avis">
+          </p>
+        </section>
+          <p>
+          <button type="submit">Envoyer</button>
+          </p>
+      </form>
+<!--******************************************FIN DU FORMULAIRE**************************************************-->
+      
+    </div>
+  </body>
+</html>

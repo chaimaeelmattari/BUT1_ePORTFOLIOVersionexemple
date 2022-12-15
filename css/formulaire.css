@@ -1,0 +1,72 @@
+#global {
+	border: 3px solid black;
+	width: 30%;
+	height: 300px;
+	display: inline-block;
+	margin: 1%;
+}
+
+body {
+	background-color: grey;
+	animation: transition1 3s;
+}
+
+#Info_perso {
+	border: 1px solid black;
+}
+
+button {
+	display: block;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+
+
+form {
+	border: 1px solid black;
+	width: 50%;
+	margin: 50px auto 0 auto;
+	border-radius: 10px;
+	background-color: lightgray;
+	padding: 20px;
+	box-shadow: 20px 20px 40px black;
+
+}
+
+.Info_perso {
+	display: inline-block;
+	width: 250 px;
+}
+
+.Info_perso_input{
+	display: inline-block;
+	width: 100%;
+}
+
+#avis {
+	height: 50px;
+}
+
+@keyframes transition1 {
+	from {
+		transition: translateY(200px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.Info_perso_input{
+		width: 200px;
+		display: inline-block;
+	}
+	#avis {
+		display: block;
+	}
+}
+
